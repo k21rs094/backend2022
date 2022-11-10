@@ -14,10 +14,10 @@
         var testRecord = new TestClass();
         testRecord.set("message2", "hello, world");
         testRecord.save()
-        .then(function(m)){
+        .then(function(m){
             alert("success:" + JSON.stringify(m));
         })
-        .catch(function(m)){
+        .catch(function(m){
             alert("fail:" + JSON.stringify(m));
         });
     </script>
