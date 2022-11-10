@@ -9,10 +9,48 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="keys.js"></script>
     <script>
+        // case1
         var ncmb = new NCMB(appKey, clientKey);
         var TestClass = ncmb.DataStore("RegisterTest2");
         var testRecord = new TestClass();
-        testRecord.set("message2", "hello, world");
+        testRecord.set("lecture", "微分方程式");
+        testRecord.set("teacher", "仲先生");
+        testRecord.set("classNumber", "12216");
+        testRecord.set("day", "月");
+        testRecord.set("time", "2限");
+        testRecord.set("Object", "選択科目");
+        testRecord.save()
+        .then(function(m){
+            alert("success:" + JSON.stringify(m));
+        })
+        .catch(function(m){
+            alert("fail:" + JSON.stringify(m));
+        });
+
+        // case2
+        var testRecord = new TestClass();
+        testRecord.set("lecture", "クラウドプログラミング演習");
+        testRecord.set("teacher", "下川先生");
+        testRecord.set("classNumber", "12107");
+        testRecord.set("day", "木");
+        testRecord.set("time", "1限");
+        testRecord.set("Object", "JABEE必修科目");
+        testRecord.save()
+        .then(function(m){
+            alert("success:" + JSON.stringify(m));
+        })
+        .catch(function(m){
+            alert("fail:" + JSON.stringify(m));
+        });
+
+        // case3
+        var testRecord = new TestClass();
+        testRecord.set("lecture", "ハードウェア設計II");
+        testRecord.set("teacher", "石田(俊)先生");
+        testRecord.set("classNumber", "12216");
+        testRecord.set("day", "金");
+        testRecord.set("time", "2限");
+        testRecord.set("Object", "必修科目");
         testRecord.save()
         .then(function(m){
             alert("success:" + JSON.stringify(m));
